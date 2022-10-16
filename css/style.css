@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+.wrapper {
+	background: rgb(168, 144, 2);
+	background: linear-gradient(90deg, rgba(168, 144, 2, 1) 5%, rgba(193, 24, 24, 1) 49%, rgba(154, 157, 2, 1) 96%);
+	width: 1020px;
+	height: 1050px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+body {
+	font-family: "Abril Fatface", serif;
+	font-style: normal;
+}
+
+/*Супроводжуючі блоки*/
+.menu__title {
+	text-align: center;
+	font-size: 36px;
+	height: 40px;
+	color: wheat;
+	background-color: black;
+	margin: 0 20px 0 20px;
+	position: sticky;
+	top: 0;
+}
+
+.menu__text {
+	color: antiquewhite;
+	font-size: 24px;
+	margin: 0px 20px 0 20px;
+}
+
+.menu__item:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.main__img {
+	position: relative;
+}
+
+.img__car {
+	position: absolute;
+	width: 800px;
+	height: 800px;
+	z-index: 2;
+}
+
+.img__wheels-back {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top: 415px;
+	left: 123px;
+}
+
+.img__wheels-first {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top: 415px;
+	left: 536px;
+}
+
+.main__img:hover [class^="img__wheels"] {
+	transform: rotate(360deg);
+	transition-duration: 5s;
+}
+
+.img__fire {
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	top: 415px;
+	/*Не знав як правильно змінити кут.Якщо через rotate то валідатор свариться((*/
+	rotate: 270deg;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.img__light {
+	position: absolute;
+	width: 250px;
+	height: 75px;
+	top: 375px;
+	left: 660px;
+	/*Не знав як правильно змінити кут.Якщо через rotate то валідатор свариться((*/
+	rotate: 330deg;
+	z-index: 1;
+	visibility: hidden;
+	opacity: 0;
+
+}
+
+.img__logo {
+	position: absolute;
+	width: 80px;
+	height: 50px;
+	top: 420px;
+	left: 440px;
+	z-index: 3;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.main__img:hover [class$="__light"],
+.main__img:hover [class$="__logo"],
+.main__img:hover [class$="__fire"] {
+	visibility: visible;
+	opacity: 1;
+}
